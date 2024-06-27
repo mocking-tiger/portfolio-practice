@@ -4,7 +4,7 @@ import SectionTitle from "./SectionTitle";
 export default function AboutMe() {
   return (
     <section id="section1" className="w-screen py-[80px] text-center">
-      <SectionTitle title="About me" />
+      <SectionTitle title="ABOUT ME" />
       <div className="max-w-[1200px] mx-auto grid grid-cols-3 gap-16">
         <AboutMeBox icon="이름" title="이름" content="박준용" />
         <AboutMeBox icon="생년월일" title="생년월일" content="1991.09.12" />
