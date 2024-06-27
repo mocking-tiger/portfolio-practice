@@ -1,22 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import NavButton from "./NavButton";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function NavContents() {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
-    <nav className="w-[15%] min-w-[240px] h-screen pt-28 flex flex-col text-white bg-[#0898CF] overflow-hidden float-left">
+    <nav className="min-w-[240px] h-fit py-20 flex flex-col text-black bg-white fixed left-10 top-[20%] rounded-lg border">
       <Image
-        className="relative left-10 -top-4"
-        src="/island.png"
+        className="relative left-[80px] -top-10"
+        src="/buddha.png"
         width={60}
         height={60}
-        alt="야자나무 이미지"
+        alt="부처 아이콘"
+        onClick={() => setIsClicked((prev) => !prev)}
       />
-      <header className="w-full mb-10 pl-10 text-[32px]">
-        안녕하세요, <br />
-        박준용입니다.
-      </header>
-      <div className="flex flex-col gap-12">
-        <NavButton>About me</NavButton>
+      {isClicked && (
+        <div className="w-full p-3 text-center text-white rounded-3xl absolute -top-10 bg-[#27BCF3] after:absolute after:content-[''] after:border-[#27BCF3] after:border-t-[30px] after:top-[40px] after:right-[105px] after:border-l-[20px] after:border-r-[20px] after:border-l-transparent after:border-r-transparent transition-all duration-700">
+          항상 행복하세요
+        </div>
+      )}
+      <div className="flex flex-col gap-12 overflow-hidden">
+        <Link href="#section1">
+          <NavButton>About me</NavButton>
+        </Link>
         <NavButton>Skills</NavButton>
         <NavButton>Archiving</NavButton>
         <NavButton>Projects</NavButton>
