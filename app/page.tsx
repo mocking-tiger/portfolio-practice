@@ -1,4 +1,5 @@
 import AboutMe from "@/components/AboutMe";
+import Archiving from "@/components/Archiving";
 import NavContents from "@/components/NavContents";
 import Skills from "@/components/Skills";
 import Typewriter from "@/components/Typewriter";
@@ -12,6 +13,7 @@ export default function Home() {
       </div>
       <AboutMe />
       <Skills />
+      <Archiving />
     </main>
   );
 }

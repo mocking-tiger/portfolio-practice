@@ -2,6 +2,7 @@ import SectionTitle from "./SectionTitle";
 import SkillForntend from "./SkillFrontend";
 import SkillDeployment from "./SkillDeployment";
 import SkillCommunication from "./SkillCommunication";
+import Image from "next/image";
 
 export default function Skills() {
   return (
@@ -15,6 +16,16 @@ export default function Skills() {
           <SkillDeployment />
           <h3 className="text-3xl mb-6">・Communication</h3>
           <SkillCommunication />
+          <div className="flex flex-col justify-center items-center">
+            ・ <br />・<br /> ・<br />
+            <Image
+              className="mt-5"
+              src="/whats-next.png"
+              width={100}
+              height={100}
+              alt="다음은 뭘까?아이콘"
+            />
+          </div>
         </div>
       </div>
     </section>
