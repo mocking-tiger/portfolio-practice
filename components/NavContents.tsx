@@ -9,7 +9,7 @@ export default function NavContents() {
   const [isClicked, setIsClicked] = useState(false);
 
   return (
-    <nav className="min-w-[240px] h-fit py-20 flex flex-col text-black bg-white fixed left-10 top-[20%] rounded-lg border z-50">
+    <nav className="min-w-[240px] h-fit py-20 hidden flex-col text-black bg-white fixed left-10 top-[20%] rounded-lg border z-50 2xl:flex">
       <Image
         className="relative left-[80px] -top-10"
         src="/buddha.png"

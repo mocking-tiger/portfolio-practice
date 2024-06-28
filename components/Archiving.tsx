@@ -4,7 +4,10 @@ import Link from "next/link";
 
 export default function Archiving() {
   return (
-    <section id="section3" className="w-screen py-[80px] text-center">
+    <section
+      id="section3"
+      className="w-screen py-[10px] md:py-[80px] text-center"
+    >
       <SectionTitle title="ARCHIVING" />
       <div className="max-w-[1200px] mx-auto p-[24px] flex justify-center gap-20">
         <div className="min-w-[410px] p-[24px] flex flex-col items-start bg-black rounded-lg text-white">

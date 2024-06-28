@@ -21,7 +21,7 @@ export default function Typewriter() {
   }, 100);
 
   return (
-    <p className="mb-10 pr-2 text-gray-300 font-pretendard text-center text-4xl animate-typingCursor">
+    <p className="mb-10 pr-2 text-gray-300 font-pretendard text-center text-md md:text-4xl animate-typingCursor">
       {landingText}
     </p>
   );

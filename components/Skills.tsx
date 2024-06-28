@@ -6,7 +6,10 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <section id="section2" className="w-screen py-[80px] text-center bg-black">
+    <section
+      id="section2"
+      className="w-screen py-[10px] md:py-[80px] text-center bg-black"
+    >
       <SectionTitle title="SKILLS" dark />
       <div className="max-w-[1200px] mx-auto p-[24px] bg-white rounded-lg">
         <div>

@@ -3,9 +3,12 @@ import SectionTitle from "./SectionTitle";
 
 export default function AboutMe() {
   return (
-    <section id="section1" className="w-screen py-[80px] text-center">
+    <section
+      id="section1"
+      className="w-screen py-[10px] md:py-[80px] text-center"
+    >
       <SectionTitle title="ABOUT ME" />
-      <div className="max-w-[1200px] mx-auto grid grid-cols-3 gap-16">
+      <div className="lg:max-w-[1000px] md:max-w-[700px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
         <AboutMeBox icon="이름" title="이름" content="박준용" />
         <AboutMeBox icon="생년월일" title="생년월일" content="1991.09.12" />
         <AboutMeBox icon="주소지" title="주소지" content="서울특별시 중랑구" />

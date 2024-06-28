@@ -3,7 +3,10 @@ import ImageSlider from "./ImageSlider";
 
 export default function Projects() {
   return (
-    <section id="section4" className="w-screen py-[80px] text-center bg-black">
+    <section
+      id="section4"
+      className="w-screen py-[10px] md:py-[80px] text-center bg-black"
+    >
       <SectionTitle title="PROJECTS" dark />
       <div className="flex flex-col gap-10">
         <div className="max-w-[1200px] mx-auto p-[24px] bg-white rounded-lg">

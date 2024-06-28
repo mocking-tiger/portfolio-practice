@@ -36,7 +36,7 @@ export default function AboutMeBox({
     }
   }
   return (
-    <div className="flex justify-center gap-10">
+    <div className="flex justify-center gap-0 md:gap-10">
       <div className="w-fit">
         <Image src={icon} width={32} height={32} alt="사람 아이콘" />
       </div>
