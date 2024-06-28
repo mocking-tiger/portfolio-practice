@@ -30,8 +30,12 @@ export default function NavContents() {
         <Link href="#section2">
           <NavButton>Skills</NavButton>
         </Link>
-        <NavButton>Archiving</NavButton>
-        <NavButton>Projects</NavButton>
+        <Link href="#section3">
+          <NavButton>Archiving</NavButton>
+        </Link>
+        <Link href="#section4">
+          <NavButton>Projects</NavButton>
+        </Link>
       </div>
     </nav>
   );

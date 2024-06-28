@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import Archiving from "@/components/Archiving";
 import NavContents from "@/components/NavContents";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Typewriter from "@/components/Typewriter";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Archiving />
+      <Projects />
     </main>
   );
 }
