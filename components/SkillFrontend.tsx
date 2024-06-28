@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SkillForntend() {
   return (
-    <div className="mb-6 pb-6 border-b flex gap-10 items-center">
+    <div className="mb-6 pb-6 border-b flex gap-10 items-center flex-wrap">
       <Image
         src="/skills/html5.svg"
         width={60}

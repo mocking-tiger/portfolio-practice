@@ -9,8 +9,8 @@ export default function Archiving() {
       className="w-screen py-[10px] md:py-[80px] text-center"
     >
       <SectionTitle title="ARCHIVING" />
-      <div className="max-w-[1200px] mx-auto p-[24px] flex justify-center gap-20">
-        <div className="min-w-[410px] p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
+      <div className="max-w-[1200px] mx-auto p-[24px] flex flex-wrap justify-center gap-5 lg:gap-20">
+        <div className="w-[350px] md:min-w-[410px] p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
           <Image
             src="/github-logo.svg"
             width={200}
@@ -29,7 +29,7 @@ export default function Archiving() {
             모든 개발 관련 자료의 클라우드처럼 사용하고 있습니다.
           </p>
         </div>
-        <div className="min-w-[410px] p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
+        <div className="w-[350px] md:min-w-[410px] mb-20 md:mb-0 p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
           <Image
             className="py-20"
             src="/linktree.svg"
