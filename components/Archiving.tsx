@@ -22,7 +22,7 @@ export default function Archiving() {
             https://github.com/mocking-tiger
           </Link>
           <p className="text-left text-lg">
-            프로젝트 소스코드뿐 아니라 실습, 회고 등 <br />
+            프로젝트 소스코드뿐 아니라 연습, 회고 등 <br />
             모든 개발 관련 자료의 클라우드처럼 사용하고 있습니다.
           </p>
         </div>
