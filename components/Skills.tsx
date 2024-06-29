@@ -11,7 +11,7 @@ export default function Skills() {
       className="w-screen py-[10px] md:py-[80px] text-center bg-black"
     >
       <SectionTitle title="SKILLS" dark />
-      <div className="max-w-[350px] sm:max-w-[550px] md:max-w-[800px] lg:max-w-[1000px] mx-auto mb-20 md:mb-0 p-[24px] bg-white rounded-lg">
+      <div className="max-w-[350px] sm:max-w-[550px] md:max-w-[750px] lg:max-w-[950px] mx-auto mb-20 md:mb-0 p-[24px] bg-white rounded-lg">
         <div>
           <h3 className="text-3xl mb-6">・Frontend</h3>
           <SkillForntend />

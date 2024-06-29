@@ -8,10 +8,10 @@ export default function ImageSlider({ images }: { images: string[] }) {
 
   const test = [
     "translate-x-[0px]",
-    "translate-x-[-400px]",
-    "translate-x-[-800px]",
-    "translate-x-[-1200px]",
-    "translate-x-[-1600px]",
+    "translate-x-[-300px] md:translate-x-[-400px]",
+    "translate-x-[-600px] md:translate-x-[-800px]",
+    "translate-x-[-900px] md:translate-x-[-1200px]",
+    "translate-x-[-1200px] md:translate-x-[-1600px]",
   ];
 
   const handleImageMoving = (direction: string) => {
@@ -27,12 +27,12 @@ export default function ImageSlider({ images }: { images: string[] }) {
   };
 
   return (
-    <div className="relative">
-      <div className="w-[400px] h-[400px] flex overflow-hidden">
+    <div className="h-fit relative">
+      <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] mx-auto flex overflow-hidden">
         {images &&
           images.map((image, index) => (
             <Image
-              className={`${test[current]} transition-all duration-150`}
+              className={`w-[300px] h-[300px] md:w-[400px] md:h-[400px] ${test[current]} transition-all duration-150 rounded-lg`}
               src={image}
               width={400}
               height={400}
