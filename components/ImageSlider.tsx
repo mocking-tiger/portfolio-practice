@@ -4,34 +4,25 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function ImageSlider({ images }: { images: string[] }) {
-  const [current, setCurrent] = useState(1);
-  const [x, setX] = useState(0);
-  const [position, setPosition] = useState("translate-x-[0px]");
+  const [current, setCurrent] = useState(0);
+
+  const test = [
+    "translate-x-[0px]",
+    "translate-x-[-400px]",
+    "translate-x-[-800px]",
+    "translate-x-[-1200px]",
+    "translate-x-[-1600px]",
+  ];
 
   const handleImageMoving = (direction: string) => {
     if (direction === "left") {
-      setCurrent((prev) => prev + 1);
-      if (current >= images.length) {
-        setX(0);
-        setCurrent(1);
-        setPosition("translate-x-[0px]");
-        return;
-      }
-      const newX = x - 400;
-      setX(newX);
-      setPosition(`translate-x-[${newX}px]`);
+      current + 1 === images.length
+        ? setCurrent(0)
+        : setCurrent((prev) => prev + 1);
     } else {
-      if (current === 1) {
-        const endOfArray = 400 * -(images.length - 1);
-        setX(endOfArray);
-        setCurrent(images.length);
-        setPosition(`translate-x-[${endOfArray}px]`);
-        return;
-      }
-      setCurrent((prev) => prev - 1);
-      const newX = x + 400;
-      setX(newX);
-      setPosition(`translate-x-[${newX}px]`);
+      current + 1 === 1
+        ? setCurrent(images.length - 1)
+        : setCurrent((prev) => prev - 1);
     }
   };
 
@@ -41,7 +32,7 @@ export default function ImageSlider({ images }: { images: string[] }) {
         {images &&
           images.map((image, index) => (
             <Image
-              className={`${position} transition-all duration-150`}
+              className={`${test[current]} transition-all duration-150`}
               src={image}
               width={400}
               height={400}
@@ -51,7 +42,7 @@ export default function ImageSlider({ images }: { images: string[] }) {
           ))}
       </div>
       <span>
-        {current}/{images.length}
+        {current + 1}/{images.length}
       </span>
       <Image
         className="absolute left-1 top-[45%] cursor-pointer"

@@ -46,7 +46,7 @@ export default function Archiving() {
           </Link>
           <p className="text-left text-lg">
             배포 단계까지 구현된 프로젝트 아카이브입니다.
-            <br /> 앞으로 계속 추가 될 계획입니다.
+            <br /> 앞으로 제가 개발을 하는 동안 계속 추가해 나갈 계획입니다.
           </p>
         </div>
       </div>
