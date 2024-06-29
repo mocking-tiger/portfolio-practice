@@ -32,7 +32,7 @@ export default function ImageSlider({ images }: { images: string[] }) {
         {images &&
           images.map((image, index) => (
             <Image
-              className={`w-[300px] h-[300px] md:w-[400px] md:h-[400px] ${test[current]} transition-all duration-150 rounded-lg`}
+              className={`w-[300px] h-[300px] md:w-[400px] md:h-[400px] ${test[current]} transition-all duration-150 rounded-lg object-cover`}
               src={image}
               width={400}
               height={400}

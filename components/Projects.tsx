@@ -4,6 +4,8 @@ import Link from "next/link";
 import ProjectItem from "./ProjectItem";
 import Linkbrary from "./descriptions/Linkbrary";
 import Openmind from "./descriptions/Openmind";
+import Taskify from "./descriptions/Taskify";
+import Yeogiya from "./descriptions/Yeogiya";
 
 export default function Projects() {
   return (
@@ -32,6 +34,34 @@ export default function Projects() {
           description={<Openmind />}
           link="https://openmind-phi.vercel.app/"
           git="https://github.com/OPENMIND-TFT/OPENMIND"
+          team
+        />
+        <ProjectItem
+          title="태스키파이"
+          images={[
+            "/taskify-1.png",
+            "/taskify-2.png",
+            "/taskify-3.png",
+            "/taskify-4.png",
+            "/taskify-5.png",
+          ]}
+          description={<Taskify />}
+          link="https://taskify-team-7.netlify.app/"
+          git="https://github.com/HappyDevelopers-team7/team7-taskify"
+          team
+        />
+        <ProjectItem
+          title="여기야"
+          images={[
+            "/yeogiya-1.png",
+            "/yeogiya-2.png",
+            "/yeogiya-3.png",
+            "/yeogiya-4.png",
+            "/yeogiya-5.png",
+          ]}
+          description={<Yeogiya />}
+          link="https://yeogiya.es6.kr/"
+          git="https://github.com/Sprint3-6/yeogiya"
           team
         />
       </div>
