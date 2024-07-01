@@ -16,6 +16,9 @@ export default function Home() {
       <Skills />
       <Archiving />
       <Projects />
+      <footer className="w-full h-[150px] flex justify-center items-center bg-gray-800 text-white">
+        © 2024. Park Jun Yong. All rights reserved.
+      </footer>
     </main>
   );
 }
