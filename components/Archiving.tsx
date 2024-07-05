@@ -1,8 +1,12 @@
+"use client";
+
+import { useLanguageStore } from "@/zustand/store";
 import Image from "next/image";
 import SectionTitle from "./SectionTitle";
 import Link from "next/link";
 
 export default function Archiving() {
+  const lang = useLanguageStore((state) => state.language);
   return (
     <section
       id="section3"
@@ -25,8 +29,19 @@ export default function Archiving() {
             https://github.com/mocking-tiger
           </Link>
           <p className="text-left text-lg">
-            프로젝트 소스코드뿐 아니라 연습, 회고 등 <br />
-            모든 개발 관련 자료의 클라우드처럼 사용하고 있습니다.
+            {lang === "korean" ? (
+              <>
+                프로젝트 소스코드뿐 아니라 연습, 회고 등
+                <br />
+                모든 개발 관련 자료의 클라우드처럼 사용하고 있습니다.
+              </>
+            ) : (
+              <>
+                プロジェクトのソースコードだけでなく練習、回顧など
+                <br />
+                全ての開発関連のクラウドのようにお使いしています。
+              </>
+            )}
           </p>
         </div>
         <div className="w-[350px] md:min-w-[410px] mb-20 md:mb-0 p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
@@ -45,8 +60,18 @@ export default function Archiving() {
             https://linktr.ee/mockingTiger
           </Link>
           <p className="text-left text-lg">
-            배포 단계까지 구현된 프로젝트 아카이브입니다.
-            <br /> 앞으로 제가 개발을 하는 동안 계속 추가해 나갈 계획입니다.
+            {lang === "korean" ? (
+              <>
+                배포 단계까지 구현된 프로젝트 아카이브입니다.
+                <br /> 앞으로 제가 개발을 하는 동안 계속 추가해 나갈 계획입니다.
+              </>
+            ) : (
+              <>
+                配布段階まで具現されているアーカイブでございます。
+                <br />
+                これから私が開発を致す内にずっと追加し続けていく予定です。
+              </>
+            )}
           </p>
         </div>
       </div>

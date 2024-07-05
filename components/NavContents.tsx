@@ -52,19 +52,13 @@ export default function NavContents() {
         <div className="mt-10 flex justify-center">
           <Image
             className="cursor-pointer"
-            src="/korean.png"
+            src={lang === "korean" ? "/korean.png" : "/japanese.png"}
             width={60}
             height={60}
-            alt="태극기 아이콘"
-            onClick={() => setLang("korean")}
-          />
-          <Image
-            className="cursor-pointer"
-            src="/japanese.png"
-            width={60}
-            height={60}
-            alt="일장기 아이콘"
-            onClick={() => setLang("japanese")}
+            alt="현재 언어 아이콘"
+            onClick={() => {
+              lang === "korean" ? setLang("japanese") : setLang("korean");
+            }}
           />
         </div>
       </nav>

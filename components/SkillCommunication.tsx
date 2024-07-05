@@ -11,6 +11,13 @@ export default function SkillCommunication() {
         title="github"
       />
       <Image
+        src="/skills/notion.png"
+        width={60}
+        height={60}
+        alt="notion아이콘"
+        title="notion"
+      />
+      <Image
         src="/skills/figma.svg"
         width={40}
         height={40}
