@@ -1,6 +1,4 @@
 import SectionTitle from "./SectionTitle";
-import ImageSlider from "./ImageSlider";
-import Link from "next/link";
 import ProjectItem from "./ProjectItem";
 import Linkbrary from "./descriptions/Linkbrary";
 import Openmind from "./descriptions/Openmind";

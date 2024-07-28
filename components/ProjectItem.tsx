@@ -1,6 +1,8 @@
+"use client";
+
+import { useLanguageStore } from "@/zustand/store";
 import Link from "next/link";
 import ImageSlider from "./ImageSlider";
-import Linkbrary from "./descriptions/Linkbrary";
 
 type ProjectItemType = {
   title: string;
@@ -19,6 +21,7 @@ export default function ProjectItem({
   link,
   git,
 }: ProjectItemType) {
+  const lang = useLanguageStore((state) => state.language);
   return (
     <div className="max-w-[400px] md:max-w-[750px] lg:max-w-[1200px] mx-auto p-2 md:p-[24px] bg-white rounded-lg">
       <h2 className="w-fit mx-auto mb-[24px] text-2xl">
@@ -33,7 +36,7 @@ export default function ProjectItem({
           <div className="p-5 font-pretendard text-left">{description}</div>
           <hr className="m-3" />
           <Link href={link} target="_blank" className="text-blue-400">
-            서비스 바로가기
+            {lang === "korean" ? "서비스 바로가기" : "サービスを見る"}
           </Link>
           <br />
           <Link href={git} target="_blank" className="text-blue-400">
