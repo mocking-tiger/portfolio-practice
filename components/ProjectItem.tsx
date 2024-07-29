@@ -27,7 +27,13 @@ export default function ProjectItem({
       <h2 className="w-fit mx-auto mb-[24px] text-2xl">
         {title}{" "}
         <span className="text-lg">
-          {team ? "(팀프로젝트)" : "(개인프로젝트)"}
+          {lang === "korean"
+            ? team
+              ? "(팀프로젝트)"
+              : "(개인프로젝트)"
+            : team
+            ? "(チームプロジェクト)"
+            : "(個人プロジェクト)"}
         </span>
       </h2>
       <div className="flex flex-col md:flex-row gap-10 items-center">
