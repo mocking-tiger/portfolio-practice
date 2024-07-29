@@ -54,7 +54,7 @@ export default function Projects() {
           team
         />
         <ProjectItem
-          title={lang === "korean" ? "여기야" : "ヨギヤ(こっちだよ)"}
+          title={lang === "korean" ? "여기야" : "ヨギヤ(ここだよ)"}
           images={[
             "/yeogiya-1.png",
             "/yeogiya-2.png",
