@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SkillCommunication() {
   return (
-    <div className="mb-6 pb-6 border-b flex gap-10 items-center">
+    <div className="mb-6 pb-6 border-b flex flex-wrap gap-10 items-center">
       <Image
         src="/skills/github.svg"
         width={60}
