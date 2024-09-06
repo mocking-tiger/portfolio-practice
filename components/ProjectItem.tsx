@@ -57,7 +57,7 @@ export default function ProjectItem({
           </Link>
         </div>
       </div>
-      <Modal name="image-viewer" title="">
+      <Modal name="image-viewer">
         <ImageViewer images={images} />
       </Modal>
     </div>

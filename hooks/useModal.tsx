@@ -8,11 +8,10 @@ import Image from "next/image";
 interface ModalProps {
   name: string;
   children: ReactNode;
-  title: string;
+  title?: string;
 }
 
 export const useModal = () => {
-  const currentWidth = window.screen.width;
   const [modalName, setModalName] = useState("");
 
   const openModal = (name: string) => {
@@ -24,7 +23,7 @@ export const useModal = () => {
   };
 
   const Modal = useCallback(
-    ({ name, children, title }: ModalProps) => {
+    ({ name, children }: ModalProps) => {
       if (typeof document === "undefined") return null;
 
       return ReactDOM.createPortal(
