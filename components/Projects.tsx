@@ -21,7 +21,13 @@ export default function Projects() {
       <div className="flex flex-col gap-10">
         <ProjectItem
           title={lang === "korean" ? "링크브러리" : "リンクブラリー"}
-          images={["/linkbrary-1.png", "/linkbrary-2.png", "/linkbrary-3.png"]}
+          images={[
+            "/linkbrary-1.png",
+            "/linkbrary-2.png",
+            "/linkbrary-3.png",
+            "/linkbrary-4.png",
+            "/linkbrary-5.png",
+          ]}
           description={<Linkbrary />}
           link="https://linkbrary-remaster.vercel.app/"
           git="https://github.com/mocking-tiger/linkbrary_remaster"
