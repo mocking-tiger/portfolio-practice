@@ -17,6 +17,13 @@ export default function SkillDeployment() {
         alt="vercel아이콘"
         title="vercel"
       />
+      <Image
+        src="/skills/aws.svg"
+        width={60}
+        height={60}
+        alt="aws아이콘"
+        title="Amazon Web Service"
+      />
     </div>
   );
 }
