@@ -56,7 +56,10 @@ export default function ImageSlider({
         width={20}
         height={20}
         alt="슬라이더 왼쪽이동 버튼"
-        onClick={() => handleImageMoving("right")}
+        onClick={(e) => {
+          e.stopPropagation();
+          handleImageMoving("right");
+        }}
       />
       <Image
         className="absolute right-1 top-[45%] cursor-pointer"
@@ -64,7 +67,10 @@ export default function ImageSlider({
         width={20}
         height={20}
         alt="슬라이더 오른쪽이동 버튼"
-        onClick={() => handleImageMoving("left")}
+        onClick={(e) => {
+          e.stopPropagation();
+          handleImageMoving("left");
+        }}
       />
     </div>
   );
