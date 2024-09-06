@@ -3,7 +3,13 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function ImageSlider({ images }: { images: string[] }) {
+export default function ImageSlider({
+  images,
+  onClick,
+}: {
+  images: string[];
+  onClick: () => void;
+}) {
   const [current, setCurrent] = useState(0);
 
   const test = [
@@ -27,7 +33,7 @@ export default function ImageSlider({ images }: { images: string[] }) {
   };
 
   return (
-    <div className="h-fit relative">
+    <div className="h-fit relative cursor-pointer" onClick={onClick}>
       <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] mx-auto flex overflow-hidden">
         {images &&
           images.map((image, index) => (

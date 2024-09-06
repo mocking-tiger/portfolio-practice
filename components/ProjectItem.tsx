@@ -1,8 +1,10 @@
 "use client";
 
 import { useLanguageStore } from "@/zustand/store";
+import { useModal } from "@/hooks/useModal";
 import Link from "next/link";
 import ImageSlider from "./ImageSlider";
+import ImageViewer from "./modals/ImageViewer";
 
 type ProjectItemType = {
   title: string;
@@ -21,6 +23,8 @@ export default function ProjectItem({
   link,
   git,
 }: ProjectItemType) {
+  const currentWidth = window.screen.width;
+  const { Modal, openModal, closeModal } = useModal();
   const lang = useLanguageStore((state) => state.language);
   return (
     <div className="max-w-[400px] md:max-w-[750px] lg:max-w-[1200px] mx-auto p-2 md:p-[24px] bg-white rounded-lg">
@@ -37,7 +41,10 @@ export default function ProjectItem({
         </span>
       </h2>
       <div className="flex flex-col md:flex-row gap-10 items-center">
-        <ImageSlider images={images} />
+        <ImageSlider
+          images={images}
+          onClick={() => currentWidth > 450 && openModal("image-viewer")}
+        />
         <div className="w-[350px] md:w-[400px]">
           <div className="p-5 font-pretendard text-left">{description}</div>
           <hr className="m-3" />
@@ -50,6 +57,9 @@ export default function ProjectItem({
           </Link>
         </div>
       </div>
+      <Modal name="image-viewer" title="">
+        <ImageViewer images={images} />
+      </Modal>
     </div>
   );
 }
