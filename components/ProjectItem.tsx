@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useLanguageStore } from "@/zustand/store";
 import { useModal } from "@/hooks/useModal";
 import Link from "next/link";
@@ -23,9 +24,16 @@ export default function ProjectItem({
   link,
   git,
 }: ProjectItemType) {
-  const currentWidth = window.screen.width;
-  const { Modal, openModal, closeModal } = useModal();
   const lang = useLanguageStore((state) => state.language);
+  const { Modal, openModal, closeModal } = useModal();
+  const [currentWidth, setCurrentWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setCurrentWidth(window.innerWidth); // window 객체 사용 가능
+    }
+  }, []);
+
   return (
     <div className="max-w-[400px] md:max-w-[750px] lg:max-w-[1200px] mx-auto p-2 md:p-[24px] bg-white rounded-lg">
       <h2 className="w-fit mx-auto mb-[24px] text-2xl">
@@ -43,7 +51,9 @@ export default function ProjectItem({
       <div className="flex flex-col md:flex-row gap-10 items-center">
         <ImageSlider
           images={images}
-          onClick={() => currentWidth > 450 && openModal("image-viewer")}
+          onClick={() =>
+            currentWidth && currentWidth > 450 && openModal("image-viewer")
+          }
         />
         <div className="w-[350px] md:w-[400px]">
           <div className="p-5 font-pretendard text-left">{description}</div>
