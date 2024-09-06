@@ -7,6 +7,7 @@ import Linkbrary from "./descriptions/Linkbrary";
 import Openmind from "./descriptions/Openmind";
 import Taskify from "./descriptions/Taskify";
 import Yeogiya from "./descriptions/Yeogiya";
+import Slidtodo from "./descriptions/Slidtodo";
 
 export default function Projects() {
   const lang = useLanguageStore((state) => state.language);
@@ -66,6 +67,19 @@ export default function Projects() {
           link="https://yeogiya.es6.kr/"
           git="https://github.com/Sprint3-6/yeogiya"
           team
+        />
+        <ProjectItem
+          title={lang === "korean" ? "슬리드 투두" : "スリッドトゥドゥ"}
+          images={[
+            "/slidtodo-1.png",
+            "/slidtodo-2.png",
+            "/slidtodo-3.png",
+            "/slidtodo-4.png",
+            "/slidtodo-5.png",
+          ]}
+          description={<Slidtodo />}
+          link="https://slid-todo.com/"
+          git="https://github.com/mocking-tiger/slid-todo"
         />
       </div>
     </section>
