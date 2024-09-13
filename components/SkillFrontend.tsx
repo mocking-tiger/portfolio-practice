@@ -59,27 +59,6 @@ export default function SkillForntend() {
         alt="tailwind아이콘"
         title="tailwindCSS"
       />
-      <Image
-        src="/skills/zustand.png"
-        width={80}
-        height={80}
-        alt="zustand아이콘"
-        title="zustand"
-      />
-      <Image
-        src="/skills/vite.svg"
-        width={60}
-        height={60}
-        alt="vite아이콘"
-        title="vite"
-      />
-      <Image
-        src="/skills/axios.png"
-        width={80}
-        height={80}
-        alt="axios아이콘"
-        title="axios"
-      />
     </div>
   );
 }
