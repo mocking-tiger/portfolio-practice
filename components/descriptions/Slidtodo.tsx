@@ -32,6 +32,15 @@ export default function Slidtodo() {
         이전까지 netlify와 vercel로 자동배포만 했던것과 달리 수동배포 경험이 꼭
         필요하다고 생각해서 이번에는 aws 의 ec2로 클라우드 인스턴스를 생성,
         수동으로 배포 했고 CodePipeline으로 지속 배포 환경도 구현했습니다.
+        <br />
+        <br />
+        <a
+          className="text-blue-600 underline"
+          href="https://slid-todo.vercel.app/"
+          target="_blank"
+        >
+          서비스 임시링크(aws 이메일 인증을 깜빡해서 잠시 suspend 됨)
+        </a>
       </p>
     );
   } else {
