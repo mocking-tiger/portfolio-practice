@@ -53,8 +53,10 @@ export default function NavContents() {
           <Image
             className="cursor-pointer"
             src={lang === "korean" ? "/korean.png" : "/japanese.png"}
-            width={60}
-            height={60}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "60px", height: "auto" }}
             alt="현재 언어 아이콘"
             onClick={() => {
               lang === "korean" ? setLang("japanese") : setLang("korean");
@@ -148,8 +150,10 @@ export default function NavContents() {
           <Image
             className="absolute right-5 top-1 cursor-pointer"
             src={lang === "korean" ? "/korean.png" : "/japanese.png"}
-            width={40}
-            height={40}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "40px", height: "auto" }}
             alt="현재 언어 아이콘"
             onClick={() => {
               lang === "korean" ? setLang("japanese") : setLang("korean");

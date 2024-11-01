@@ -25,13 +25,21 @@ export default function ProjectItem({
   git,
 }: ProjectItemType) {
   const lang = useLanguageStore((state) => state.language);
-  const { Modal, openModal, closeModal } = useModal();
+  const { Modal, openModal } = useModal();
   const [currentWidth, setCurrentWidth] = useState<number | null>(null);
 
+  const screenWidthSetter = () => {
+    const tempWidth = window.innerWidth;
+    setCurrentWidth(tempWidth);
+  };
+
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setCurrentWidth(window.innerWidth); // window 객체 사용 가능
-    }
+    setCurrentWidth(window.innerWidth);
+    addEventListener("resize", screenWidthSetter);
+
+    return () => {
+      removeEventListener("resize", screenWidthSetter);
+    };
   }, []);
 
   return (
@@ -52,7 +60,7 @@ export default function ProjectItem({
         <ImageSlider
           images={images}
           onClick={() =>
-            currentWidth && currentWidth > 450 && openModal("image-viewer")
+            currentWidth && currentWidth >= 830 && openModal("image-viewer")
           }
         />
         <div className="w-[350px] md:w-[400px]">

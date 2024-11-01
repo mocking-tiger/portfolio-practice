@@ -17,8 +17,10 @@ export default function Archiving() {
         <div className="w-[350px] md:min-w-[410px] p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
           <Image
             src="/github-logo.svg"
-            width={200}
-            height={100}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "200px", height: "auto" }}
             alt="github로고"
           />
           <Link
@@ -48,8 +50,10 @@ export default function Archiving() {
           <Image
             className="py-20"
             src="/linktree.svg"
-            width={200}
-            height={200}
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "200px", height: "auto" }}
             alt="github로고"
           />
           <Link

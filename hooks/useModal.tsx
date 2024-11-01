@@ -1,9 +1,8 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ReactNode } from "react";
 import ReactDOM from "react-dom";
-import Image from "next/image";
 
 interface ModalProps {
   name: string;
@@ -13,6 +12,7 @@ interface ModalProps {
 
 export const useModal = () => {
   const [modalName, setModalName] = useState("");
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const openModal = (name: string) => {
     setModalName(name);
@@ -21,6 +21,19 @@ export const useModal = () => {
   const closeModal = () => {
     setModalName("");
   };
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
+
+      addEventListener("resize", handleResize);
+      return () => removeEventListener("resize", handleResize);
+    }
+  }, []);
 
   const Modal = useCallback(
     ({ name, children }: ModalProps) => {
@@ -33,7 +46,9 @@ export const useModal = () => {
             onClick={closeModal}
           >
             <div
-              className="w-[60%] h-[90%] p-[24px] bg-white rounded-[12px] relative"
+              className={`${
+                windowWidth >= 1500 ? "w-[60%]" : "w-[85%]"
+              } h-[90%] p-[24px] bg-white rounded-[12px] relative`}
               onClick={(e) => e.stopPropagation()}
             >
               {children}
@@ -43,7 +58,7 @@ export const useModal = () => {
         document.body
       );
     },
-    [modalName]
+    [modalName, windowWidth]
   );
 
   return { Modal, openModal, closeModal };

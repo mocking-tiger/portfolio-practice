@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ImageViewer({ images }: { images: string[] }) {
   const [current, setCurrent] = useState(0);
   const length = images.length;
-  console.log(images);
 
   const imageController = (type: String) => {
     if (type === "next") {
@@ -18,7 +17,7 @@ export default function ImageViewer({ images }: { images: string[] }) {
 
   return (
     <div className="relative w-full h-full">
-      <Image src={images[current]} fill alt="image" className="" />
+      <Image src={images[current]} fill sizes="auto" alt="image" />
       <div>
         <button
           className="p-3 bg-black text-white text-[2rem] absolute top-[45%] rounded-lg"

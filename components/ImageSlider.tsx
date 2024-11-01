@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ImageSlider({
   images,
@@ -53,8 +53,10 @@ export default function ImageSlider({
       <Image
         className="absolute left-1 top-[45%] cursor-pointer"
         src="/icon-left.svg"
-        width={20}
-        height={20}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "20px", height: "auto" }}
         alt="슬라이더 왼쪽이동 버튼"
         onClick={(e) => {
           e.stopPropagation();
@@ -64,8 +66,10 @@ export default function ImageSlider({
       <Image
         className="absolute right-1 top-[45%] cursor-pointer"
         src="/icon-right.svg"
-        width={20}
-        height={20}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "20px", height: "auto" }}
         alt="슬라이더 오른쪽이동 버튼"
         onClick={(e) => {
           e.stopPropagation();

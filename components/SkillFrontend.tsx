@@ -12,8 +12,10 @@ export default function SkillForntend() {
       />
       <Image
         src="/skills/css3.svg"
-        width={43}
-        height={43}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "43px", height: "auto" }}
         alt="css아이콘"
         title="css3"
       />
@@ -40,8 +42,10 @@ export default function SkillForntend() {
       />
       <Image
         src="/skills/nextjs.svg"
-        width={100}
-        height={60}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100px", height: "auto" }}
         alt="nextjs아이콘"
         title="Next.js"
       />
@@ -54,8 +58,10 @@ export default function SkillForntend() {
       />
       <Image
         src="/skills/tailwind.svg"
-        width={60}
-        height={60}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "60px", height: "auto" }}
         alt="tailwind아이콘"
         title="tailwindCSS"
       />

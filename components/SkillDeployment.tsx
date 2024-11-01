@@ -19,8 +19,10 @@ export default function SkillDeployment() {
       />
       <Image
         src="/skills/aws.svg"
-        width={60}
-        height={60}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "60px", height: "auto" }}
         alt="aws아이콘"
         title="Amazon Web Service"
       />

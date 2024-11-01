@@ -19,8 +19,10 @@ export default function SkillCommunication() {
       />
       <Image
         src="/skills/figma.svg"
-        width={40}
-        height={40}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "40px", height: "auto" }}
         alt="figma아이콘"
         title="figma"
       />

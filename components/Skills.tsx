@@ -24,8 +24,10 @@ export default function Skills() {
             <Image
               className="mt-5"
               src="/whats-next.png"
-              width={100}
-              height={100}
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "100px", height: "auto" }}
               alt="다음은 뭘까?아이콘"
             />
           </div>
