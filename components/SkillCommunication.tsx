@@ -33,6 +33,13 @@ export default function SkillCommunication() {
         alt="discord아이콘"
         title="discord"
       />
+      <Image
+        src="/skills/slack.svg"
+        width={60}
+        height={60}
+        alt="slack아이콘"
+        title="slack"
+      />
     </div>
   );
 }
