@@ -8,6 +8,7 @@ import Openmind from "./descriptions/Openmind";
 import Taskify from "./descriptions/Taskify";
 import Yeogiya from "./descriptions/Yeogiya";
 import Slidtodo from "./descriptions/Slidtodo";
+import Netplix from "./descriptions/Netplix";
 
 export default function Projects() {
   const lang = useLanguageStore((state) => state.language);
@@ -86,6 +87,19 @@ export default function Projects() {
           description={<Slidtodo />}
           link="https://slid-todo.com/"
           git="https://github.com/mocking-tiger/slid-todo"
+        />
+        <ProjectItem
+          title={lang === "korean" ? "NETPLIX" : "NETPLIX"}
+          images={[
+            "/netplix-1.png",
+            "/netplix-2.png",
+            "/netplix-3.png",
+            "/netplix-4.png",
+            "/netplix-5.png",
+          ]}
+          description={<Netplix />}
+          link="https://netplix-three.vercel.app/tv"
+          git="https://github.com/mocking-tiger/NETPLIX"
         />
       </div>
     </section>
