@@ -46,7 +46,7 @@ export default function Archiving() {
             )}
           </p>
         </div>
-        <div className="w-[350px] md:min-w-[410px] mb-20 md:mb-0 p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
+        <div className="w-[350px] md:min-w-[410px] md:mb-0 p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
           <Image
             className="py-20"
             src="/linktree.svg"
@@ -74,6 +74,29 @@ export default function Archiving() {
                 配布段階まで具現されているアーカイブでございます。
                 <br />
                 これから私が開発を致す内にずっと追加し続けていく予定です。
+              </>
+            )}
+          </p>
+        </div>
+        <div className="w-[350px] md:min-w-[410px] mb-20 md:mb-0 p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
+          <h3 className="py-[50px] text-[48px]">CSS-NOTE</h3>
+          <Link
+            href="https://css-note.vercel.app"
+            target="_blank"
+            className="mb-5 underline"
+          >
+            https://css-note.vercel.app
+          </Link>
+          <p className="text-left text-lg">
+            {lang === "korean" ? (
+              <>
+                웹을 돌아다니다 보면 CSS와 JS를 활용한 정말 다양한 시각 효과들을
+                볼 수 있는데, 똑같이 만들어보고 싶을 때마다 연습장에 휙휙
+                그려나가듯이 바로 해볼 수 있게 만든 프로젝트입니다.
+              </>
+            ) : (
+              <>
+                ウェブを巡っていると、CSSおよびJSを活用した多くの視覚効果を見ることが出来ますが、同じく具現したいたびに手帳にスラスラ描くように使っているプロジェクトでございます。
               </>
             )}
           </p>
