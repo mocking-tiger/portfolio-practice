@@ -67,19 +67,21 @@ export default function Archiving() {
             {lang === "korean" ? (
               <>
                 배포 단계까지 구현된 프로젝트 아카이브입니다.
-                <br /> 앞으로 제가 개발을 하는 동안 계속 추가해 나갈 계획입니다.
+                <br /> 포트폴리오에 올리기에 규모가 작은 토이프로젝트나, 새로운
+                스킬을 익히기 위해 실험적으로 만들어본 프로젝트 등이 있습니다.
               </>
             ) : (
               <>
                 配布段階まで具現されているアーカイブでございます。
                 <br />
-                これから私が開発を致す内にずっと追加し続けていく予定です。
+                ポートフォリオに載せるには規模の小さいトイプロジェクトや、新しい
+                スキルを身につけるために実験的に作ってみたプロジェクトなどがあります。
               </>
             )}
           </p>
         </div>
         <div className="w-[350px] md:min-w-[410px] mb-20 md:mb-0 p-[24px] flex flex-col items-start bg-black rounded-lg text-white">
-          <h3 className="py-[50px] text-[48px]">CSS-NOTE</h3>
+          <h3 className="py-[50px] text-[48px] select-none">WEB-SKETCH</h3>
           <Link
             href="https://css-note.vercel.app"
             target="_blank"
