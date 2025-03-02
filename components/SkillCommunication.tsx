@@ -40,6 +40,13 @@ export default function SkillCommunication() {
         alt="slack아이콘"
         title="slack"
       />
+      <Image
+        src="/skills/miro.png"
+        width={60}
+        height={60}
+        alt="slack아이콘"
+        title="miro"
+      />
     </div>
   );
 }

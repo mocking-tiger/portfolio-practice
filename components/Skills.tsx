@@ -3,6 +3,7 @@ import SkillForntend from "./SkillFrontend";
 import SkillDeployment from "./SkillDeployment";
 import SkillCommunication from "./SkillCommunication";
 import Image from "next/image";
+import SkillBackend from "./SkillBackend";
 
 export default function Skills() {
   return (
@@ -15,6 +16,8 @@ export default function Skills() {
         <div>
           <h3 className="text-3xl mb-6">・Frontend</h3>
           <SkillForntend />
+          <h3 className="text-3xl mb-6">・Backend</h3>
+          <SkillBackend />
           <h3 className="text-3xl mb-6">・Deployment</h3>
           <SkillDeployment />
           <h3 className="text-3xl mb-6">・Communication</h3>
