@@ -85,7 +85,7 @@ export default function Projects() {
             "/slidtodo-5.png",
           ]}
           description={<Slidtodo />}
-          link="https://slid-todo.com/"
+          link="https://slid-todo.vercel.app/"
           git="https://github.com/mocking-tiger/slid-todo"
         />
         <ProjectItem
