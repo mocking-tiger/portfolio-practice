@@ -20,7 +20,7 @@ export default function Projects() {
     >
       <SectionTitle title="PROJECTS" dark />
       <div className="flex flex-col gap-10">
-        <ProjectItem
+        {/* <ProjectItem
           title={lang === "korean" ? "링크브러리" : "リンクブラリー"}
           images={[
             "/linkbrary-1.png",
@@ -74,7 +74,7 @@ export default function Projects() {
           link="https://yeogiya.es6.kr/"
           git="https://github.com/Sprint3-6/yeogiya"
           team
-        />
+        /> */}
         <ProjectItem
           title={lang === "korean" ? "슬리드 투두" : "スリッドトゥドゥ"}
           images={[
