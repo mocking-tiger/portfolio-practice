@@ -8,7 +8,7 @@ export default function Typewriter() {
   const lang = useLanguageStore((state) => state.language);
   const text =
     lang === "korean"
-      ? "안녕하세요. 어제도 개발한 예비 개발자, 박준용입니다."
+      ? "안녕하세요. 어제도 개발한 사람, 박준용입니다."
       : "こんにちは。昨日も開発を致した、パク・ジュニョンと申します。";
   const [landingText, setLandingText] = useState("");
   const [count, setCount] = useState(0);

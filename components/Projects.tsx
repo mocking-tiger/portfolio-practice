@@ -9,6 +9,7 @@ import Taskify from "./descriptions/Taskify";
 import Yeogiya from "./descriptions/Yeogiya";
 import Slidtodo from "./descriptions/Slidtodo";
 import Netplix from "./descriptions/Netplix";
+import Shuren from "./descriptions/Shuren";
 
 export default function Projects() {
   const lang = useLanguageStore((state) => state.language);
@@ -75,7 +76,7 @@ export default function Projects() {
           git="https://github.com/Sprint3-6/yeogiya"
           team
         /> */}
-        <ProjectItem
+        {/* <ProjectItem
           title={lang === "korean" ? "슬리드 투두" : "スリッドトゥドゥ"}
           images={[
             "/slidtodo-1.png",
@@ -87,8 +88,8 @@ export default function Projects() {
           description={<Slidtodo />}
           link="https://slid-todo.vercel.app/"
           git="https://github.com/mocking-tiger/slid-todo"
-        />
-        <ProjectItem
+        /> */}
+        {/* <ProjectItem
           title={lang === "korean" ? "NETPLIX" : "NETPLIX"}
           images={[
             "/netplix-1.png",
@@ -100,6 +101,19 @@ export default function Projects() {
           description={<Netplix />}
           link="https://netplix-three.vercel.app/tv"
           git="https://github.com/mocking-tiger/NETPLIX"
+        /> */}
+        <ProjectItem
+          title={lang === "korean" ? "슈렌" : "修練"}
+          images={[
+            "/shuren-1.png",
+            "/shuren-2.png",
+            "/shuren-3.png",
+            "/shuren-4.png",
+            "/shuren-5.png",
+          ]}
+          description={<Shuren />}
+          link="https://shuren.vercel.app/"
+          git="https://github.com/mocking-tiger/shuren"
         />
       </div>
     </section>

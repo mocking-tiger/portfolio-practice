@@ -9,8 +9,17 @@ export default function SkillBackend() {
         height={0}
         sizes="100vw"
         style={{ width: "80px", height: "auto" }}
-        alt="tailwind아이콘"
+        alt="node.js아이콘"
         title="node.js"
+      />
+      <Image
+        src="/skills/express.jpg"
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "80px", height: "auto" }}
+        alt="express아이콘"
+        title="express"
       />
       <Image
         src="/skills/prisma.jpg"
@@ -18,7 +27,7 @@ export default function SkillBackend() {
         height={0}
         sizes="100vw"
         style={{ width: "80px", height: "auto" }}
-        alt="tailwind아이콘"
+        alt="prisma아이콘"
         title="prisma"
       />
       <Image
@@ -27,7 +36,7 @@ export default function SkillBackend() {
         height={0}
         sizes="100vw"
         style={{ width: "80px", height: "auto" }}
-        alt="tailwind아이콘"
+        alt="MySQL아이콘"
         title="MySQL"
       />
     </div>
