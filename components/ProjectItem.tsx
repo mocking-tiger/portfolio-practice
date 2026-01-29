@@ -85,9 +85,9 @@ export default function ProjectItem({
             {lang === "korean" ? "서비스 바로가기" : "サービスを見る"}
           </Link>
           <br />
-          <Link href={git} target="_blank" className="text-blue-400">
+          {type !== "company" ?<Link href={git} target="_blank" className="text-blue-400">
             github repository
-          </Link>
+          </Link> : <span className="text-gray-400">{lang === "korean" ? "회사 프로젝트는 git이 공개되지 않습니다." : "会社プロジェクトは git が公開されていません。"}</span>}
         </div>
       </div>
       <Modal name="image-viewer">
