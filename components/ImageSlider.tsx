@@ -1,24 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function ImageSlider({
+const ImageSlider = ({
   images,
   onClick,
 }: {
   images: string[];
   onClick: () => void;
-}) {
+}) => {
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const test = [
-    "translate-x-[0px]",
-    "translate-x-[-300px] md:translate-x-[-400px]",
-    "translate-x-[-600px] md:translate-x-[-800px]",
-    "translate-x-[-900px] md:translate-x-[-1200px]",
-    "translate-x-[-1200px] md:translate-x-[-1600px]",
-  ];
+  // 화면 크기 감지
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // 동적으로 translate 값 계산
+  const getTranslateValue = () => {
+    const offset = isMobile ? current * 300 : current * 400;
+    return -offset;
+  };
 
   const handleImageMoving = (direction: string) => {
     if (direction === "left") {
@@ -38,7 +47,8 @@ export default function ImageSlider({
         {images &&
           images.map((image, index) => (
             <Image
-              className={`w-[300px] h-[300px] md:w-[400px] md:h-[400px] ${test[current]} transition-all duration-150 rounded-lg object-cover`}
+              className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] transition-all duration-150 rounded-lg object-cover"
+              style={{ transform: `translateX(${getTranslateValue()}px)` }}
               src={image}
               width={400}
               height={400}
@@ -78,4 +88,6 @@ export default function ImageSlider({
       />
     </div>
   );
-}
+};
+
+export default ImageSlider;
