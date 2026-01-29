@@ -7,9 +7,11 @@ import Link from "next/link";
 import ImageSlider from "./ImageSlider";
 import ImageViewer from "./modals/ImageViewer";
 
+type ProjectType = "personal" | "team" | "company";
+
 type ProjectItemType = {
   title: string;
-  team?: boolean;
+  type?: ProjectType;
   images: string[];
   description: React.ReactNode;
   link: string;
@@ -18,7 +20,7 @@ type ProjectItemType = {
 
 export default function ProjectItem({
   title,
-  team = false,
+  type = "personal",
   images,
   description,
   link,
@@ -42,19 +44,32 @@ export default function ProjectItem({
     };
   }, []);
 
+  const getProjectLabel = () => {
+    if (lang === "korean") {
+      switch (type) {
+        case "company":
+          return "(회사 프로젝트)";
+        case "team":
+          return "(팀 프로젝트)";
+        case "personal":
+          return "(개인 프로젝트)";
+      }
+    } else {
+      switch (type) {
+        case "company":
+          return "(会社プロジェクト)";
+        case "team":
+          return "(チームプロジェクト)";
+        case "personal":
+          return "(個人プロジェクト)";
+      }
+    }
+  };
+
   return (
     <div className="max-w-[400px] md:max-w-[750px] lg:max-w-[1200px] mx-auto p-2 md:p-[24px] bg-white rounded-lg">
       <h2 className="w-fit mx-auto mb-[24px] text-2xl">
-        {title}{" "}
-        <span className="text-lg">
-          {lang === "korean"
-            ? team
-              ? "(팀프로젝트)"
-              : "(개인프로젝트)"
-            : team
-            ? "(チームプロジェクト)"
-            : "(個人プロジェクト)"}
-        </span>
+        {title} <span className="text-lg">{getProjectLabel()}</span>
       </h2>
       <div className="flex flex-col md:flex-row gap-10 items-center">
         <ImageSlider
